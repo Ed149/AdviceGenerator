@@ -1,0 +1,125 @@
+:root {
+    /*primary colors*/
+    --LightCyan: rgb(206, 227, 233);
+    --NeonGreen: rgb(82, 255, 168);
+    --hoverNeonGreen: rgba(82, 255, 169, 0.767);
+
+    --GrayishBlue: rgb(78, 93, 115);
+    --DarkGrayishBlue: rgb(50, 58, 73);
+    --DarkBlue: rgb(31, 38, 50);
+
+
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--DarkBlue);
+    font-size: 1.75rem;
+    font-family: 'Manrope', sans-serif;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.cardBox {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 90%;
+    background-color: var(--DarkGrayishBlue);
+    padding: 40px 30px;
+    border-radius: 10px;
+}
+
+@media screen and (min-width:768px) {
+    .card {
+        width: 40%;
+    }
+}
+
+.adviceNumber {
+    font-size: .8rem;
+    color: var(--NeonGreen);
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+#advice {
+    color: var(--LightCyan);
+    font-size: 1.5rem;
+    padding: 1.4rem 0;
+    text-align: center;
+}
+
+.divider {
+    width: 100%;
+    background-image: url(../img/pattern-divider-mobile.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width:768px) {
+    .divider {
+        background-image: url(../img/pattern-divider-desktop.svg);
+
+    }
+}
+
+
+.randomButtonWrapper {
+    position: relative;
+    padding: 10px;
+}
+
+.randomButton {
+    position: absolute;
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    background-image: url(../img/icon-dice.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: var(--NeonGreen);
+    border-radius: 50%;
+    text-align: center;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.randomButton:hover {
+    cursor: pointer;
+    background-color: var(--hoverNeonGreen);
+    transition: ease-in-out 200ms;
+    box-shadow: 0px 0px 30px var(--NeonGreen);
+}
+
+.randomButton:active {
+    transform: rotate(360deg);
+}
